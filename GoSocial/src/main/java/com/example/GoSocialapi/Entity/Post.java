@@ -13,10 +13,10 @@ public class Post {
 	
 	private String userID;
 	private String userName;
-	private String imageURL;
+	//private String imageURL;
 	
 	private String description;
-	private String postImgURL;
+	//private String postImgURL;
 	
 	private int likes;
 	//private Timestamp dateTime;
@@ -27,15 +27,14 @@ public class Post {
 	}
 
 
-	public Post(UUID postID, String userID, String userName, String imageURL, String description, String postImgURL,
-			int likes, Timestamp dateTime) {
+	public Post(UUID postID, String userID, String userName, String description, int likes) {
 		super();
 		this.postID = postID;
-		this.userID = userID;
+		//this.userID = userID;
 		this.userName = userName;
-		this.imageURL = imageURL;
+		//this.imageURL = imageURL;
 		this.description = description;
-		this.postImgURL = postImgURL;
+		//this.postImgURL = postImgURL;
 		this.likes = likes;
 		//this.dateTime = dateTime;
 	}
@@ -70,7 +69,7 @@ public class Post {
 		this.userName = userName;
 	}
 
-
+/*
 	public String getImageURL() {
 		return imageURL;
 	}
@@ -80,7 +79,7 @@ public class Post {
 		this.imageURL = imageURL;
 	}
 
-
+*/
 	public String getDescription() {
 		return description;
 	}
@@ -90,7 +89,7 @@ public class Post {
 		this.description = description;
 	}
 
-
+/*
 	public String getPostImgURL() {
 		return postImgURL;
 	}
@@ -99,7 +98,7 @@ public class Post {
 	public void setPostImgURL(String postImgURL) {
 		this.postImgURL = postImgURL;
 	}
-
+*/
 
 	public int getLikes() {
 		return likes;

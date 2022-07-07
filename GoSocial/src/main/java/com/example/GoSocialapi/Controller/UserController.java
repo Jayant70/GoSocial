@@ -24,16 +24,32 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
+	/*
 	@GetMapping("/hello")
 	public String hello() {
 		return "Hello World!";
 	}
+	*/
 	
 	@PostMapping("/save")
 	public User saveUserMetaData(@RequestBody User user) {
 		return userService.submitMetaDataOfUser(user);
 	}
 	
+	
+	@PostMapping("/login")
+	public boolean loginCheck(@RequestBody User user) {
+		boolean status = false;
+		ArrayList<User> allUsers = userService.retrieveAllUserDetails();
+		for(User i : allUsers) {
+			if(i.getEmailID().equals(user.getEmailID()) && i.getPasswordEn().equals(user.getPasswordEn())) {
+				status = true;
+			}
+		}
+		return status;
+		
+	}
+	/*
 	@PostMapping("/login")
 	public User loginCheck(@RequestBody User user) {
 		if(user.getEmailID().equals("abcd@gmail.com") && user.getPasswordEn().equals("admin")) {
@@ -44,7 +60,7 @@ public class UserController {
 		return user;
 		
 	}
-	
+	*/
 	@GetMapping("/getAllUsers")
 	public ArrayList<User> getAllUserDetails(){
 		return userService.retrieveAllUserDetails();
