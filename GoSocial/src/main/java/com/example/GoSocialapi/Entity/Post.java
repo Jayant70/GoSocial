@@ -19,7 +19,7 @@ public class Post {
 	private String postImgURL;
 	
 	private int likes;
-	private Timestamp dateTime;
+	//private Timestamp dateTime;
 	
 	
 	public Post() {
@@ -37,7 +37,7 @@ public class Post {
 		this.description = description;
 		this.postImgURL = postImgURL;
 		this.likes = likes;
-		this.dateTime = dateTime;
+		//this.dateTime = dateTime;
 	}
 
 
@@ -110,7 +110,7 @@ public class Post {
 		this.likes = likes;
 	}
 
-
+/*
 	public Timestamp getDateTime() {
 		return dateTime;
 	}
@@ -119,7 +119,7 @@ public class Post {
 	public void setDateTime(Timestamp dateTime) {
 		this.dateTime = dateTime;
 	}
-	
+*/	
 	
 	
 	

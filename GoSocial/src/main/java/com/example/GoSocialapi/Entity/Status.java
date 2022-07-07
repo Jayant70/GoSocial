@@ -13,17 +13,17 @@ public class Status {
 	
 	private String userID;
 	private String statusImageURL;
-	private Timestamp uploadTIme;
+	//private Timestamp uploadTIme;
 	public Status() {
 		super();
 		
 	}
-	public Status(UUID statusID, String userID, String statusImageURL, Timestamp uploadTIme) {
+	public Status(UUID statusID, String userID, String statusImageURL){//Timestamp uploadTIme) {
 		super();
 		this.statusID = statusID;
 		this.userID = userID;
 		this.statusImageURL = statusImageURL;
-		this.uploadTIme = uploadTIme;
+		//this.uploadTIme = uploadTIme;
 	}
 	public UUID getStatusID() {
 		return statusID;
@@ -43,12 +43,13 @@ public class Status {
 	public void setStatusImageURL(String statusImageURL) {
 		this.statusImageURL = statusImageURL;
 	}
+	/*
 	public Timestamp getUploadTIme() {
 		return uploadTIme;
 	}
 	public void setUploadTIme(Timestamp uploadTIme) {
 		this.uploadTIme = uploadTIme;
-	}
+	}*/
 	
 	
 	

@@ -19,7 +19,7 @@ public class Comment {
 	private String userName;
 	
 	private String comment;
-	private java.sql.Timestamp timestamp;
+	//private java.sql.Timestamp timestamp;
 	
 	
 	
@@ -29,8 +29,7 @@ public class Comment {
 	}
 	
 	
-	public Comment(UUID commentID, UUID postID, String userID, String userImage, String userName, String comment,
-			Timestamp timestamp) {
+	public Comment(UUID commentID, UUID postID, String userID, String userImage, String userName, String comment) {
 		super();
 		this.commentID = commentID;
 		this.postID = postID;
@@ -38,7 +37,7 @@ public class Comment {
 		this.userImage = userImage;
 		this.userName = userName;
 		this.comment = comment;
-		this.timestamp = timestamp;
+		//this.timestamp = timestamp;
 	}
 	
 	
@@ -85,7 +84,7 @@ public class Comment {
 		this.comment = comment;
 	}
 
-
+/*
 	public Timestamp getTimestamp() {
 		return timestamp;
 	}
@@ -95,7 +94,7 @@ public class Comment {
 		this.timestamp = dateTime;
 	}
 
-
+*/
 	public String getUserImage() {
 		return userImage;
 	}
