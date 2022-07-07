@@ -14,8 +14,8 @@ public class User {
 	private String passwordEn;
 	private String emailID;
 	private String userName;
-	private String userImage;
-	private boolean active;
+	//private String userImage;
+	//private boolean active;
 	//private Timestamp joiningDate;
 	
 	public String getUserID() {
@@ -42,6 +42,7 @@ public class User {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+	/*
 	public String getUserImage() {
 		return userImage;
 	}
@@ -54,7 +55,7 @@ public class User {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
-	/*
+	
 	public Timestamp getJoiningDate() {
 		return joiningDate;
 	}
@@ -62,15 +63,14 @@ public class User {
 		this.joiningDate = joiningDate;
 	}
 	*/
-	public User(String userID, String passwordEn, String emailID, String userName, String userImage, boolean active
-			) {
+	public User(String userID, String passwordEn, String emailID, String userName) {
 		super();
 		this.userID = userID;
 		this.passwordEn = passwordEn;
 		this.emailID = emailID;
 		this.userName = userName;
-		this.userImage = userImage;
-		this.active = active;
+		//this.userImage = userImage;
+		//this.active = active;
 		//this.joiningDate = joiningDate;
 	}
 	public User() {
@@ -80,9 +80,9 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [userID=" + userID + ", passwordEn=" + passwordEn + ", emailID=" + emailID + ", userName="
-				+ userName + ", userImage=" + userImage + ", active=" + active + ", getUserID()=" + getUserID() + ", getPasswordEn()=" + getPasswordEn() + ", getEmailID()="
-				+ getEmailID() + ", getUserName()=" + getUserName() + ", getUserImage()=" + getUserImage()
-				+ ", isActive()=" + isActive() + ",  getClass()=" + getClass()
+				+ userName + ", getUserID()=" + getUserID() + ", getPasswordEn()=" + getPasswordEn() + ", getEmailID()="
+				+ getEmailID() + ", getUserName()=" + getUserName() 
+				 + ",  getClass()=" + getClass()
 				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 	

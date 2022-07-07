@@ -42,6 +42,12 @@ public class PostController {
 		//result.sort((e1, e2)->e2.getDateTime().compareTo(e1.getDateTime()));
 		return result;
 	}
+	@GetMapping("/getPost/{userName}")
+	public ArrayList<Post> retrieveAllPostByUser(@PathVariable("userName") String userName){
+		ArrayList<Post> result=postService.retriveUserPostsFromDB(userName);
+		return result;
+	}
+	
 	
 	@DeleteMapping("/delete/{postId}")
 	public ArrayList<Post> deleteParticularPost(@PathVariable("postId") UUID postID){
