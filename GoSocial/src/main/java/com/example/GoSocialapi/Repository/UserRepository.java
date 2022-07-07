@@ -9,6 +9,6 @@ public interface UserRepository extends MongoRepository<User, String>{
 	
 	User save(User user);
 	ArrayList<User> findAll();
-	User findAllByuserID(String userID);
+	User findAllByuserName(String userName);
 
 }

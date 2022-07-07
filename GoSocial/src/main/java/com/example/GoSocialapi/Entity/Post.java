@@ -1,6 +1,6 @@
 package com.example.GoSocialapi.Entity;
 
-import java.sql.Timestamp;
+//import java.sql.Timestamp;
 import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
@@ -13,13 +13,13 @@ public class Post {
 	
 	private String userID;
 	private String userName;
-	private String imageURL;
+	//private String imageURL;
 	
 	private String description;
-	private String postImgURL;
+	//private String postImgURL;
 	
 	private int likes;
-	private Timestamp dateTime;
+	//private Timestamp dateTime;
 	
 	
 	public Post() {
@@ -27,17 +27,17 @@ public class Post {
 	}
 
 
-	public Post(UUID postID, String userID, String userName, String imageURL, String description, String postImgURL,
-			int likes, Timestamp dateTime) {
+	public Post(UUID postID, String userID, String userName,  String description,/* String postImgURL,*/
+			int likes) {
 		super();
 		this.postID = postID;
 		this.userID = userID;
 		this.userName = userName;
-		this.imageURL = imageURL;
+		//this.imageURL = imageURL;
 		this.description = description;
-		this.postImgURL = postImgURL;
+		//this.postImgURL = postImgURL;
 		this.likes = likes;
-		this.dateTime = dateTime;
+		//this.dateTime = dateTime;
 	}
 
 
@@ -71,14 +71,14 @@ public class Post {
 	}
 
 
-	public String getImageURL() {
-		return imageURL;
-	}
-
-
-	public void setImageURL(String imageURL) {
-		this.imageURL = imageURL;
-	}
+//	public String getImageURL() {
+//		return imageURL;
+//	}
+//
+//
+//	public void setImageURL(String imageURL) {
+//		this.imageURL = imageURL;
+//	}
 
 
 	public String getDescription() {
@@ -90,7 +90,7 @@ public class Post {
 		this.description = description;
 	}
 
-
+/*
 	public String getPostImgURL() {
 		return postImgURL;
 	}
@@ -99,7 +99,7 @@ public class Post {
 	public void setPostImgURL(String postImgURL) {
 		this.postImgURL = postImgURL;
 	}
-
+*/
 
 	public int getLikes() {
 		return likes;
@@ -111,14 +111,14 @@ public class Post {
 	}
 
 
-	public Timestamp getDateTime() {
-		return dateTime;
-	}
-
-
-	public void setDateTime(Timestamp dateTime) {
-		this.dateTime = dateTime;
-	}
+//	public Timestamp getDateTime() {
+//		return dateTime;
+//	}
+//
+//
+//	public void setDateTime(Timestamp dateTime) {
+//		this.dateTime = dateTime;
+//	}
 	
 	
 	
