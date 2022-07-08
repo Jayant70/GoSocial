@@ -30,8 +30,20 @@ public class UserController {
 	}
 	
 	@PostMapping("/save")
-	public User saveUserMetaData(@RequestBody User user) {
-		return userService.submitMetaDataOfUser(user);
+	public String saveUserMetaData(@RequestBody User user) {
+		boolean status = false;
+		String st="Error";
+		ArrayList<User> allUsers = userService.retrieveAllUserDetails();
+			for(User i : allUsers) {
+				if((i.getEmailID().equals(user.getEmailID()) && i.getPasswordEn().equals(user.getPasswordEn())) || (i.getUserName().equals(user.getUserName()))) {
+					status = true;
+					break;
+				}
+			}
+		if (status) {
+			return st;
+		}
+		return user.getUserName();
 	}
 	
 	@PostMapping("/login")
@@ -43,6 +55,7 @@ public class UserController {
 			if(i.getEmailID().equals(user.getEmailID()) && i.getPasswordEn().equals(user.getPasswordEn())) {
 				//status = true;
 				status += i.getUserName();
+				break;
 			}
 		}
 		return status;
