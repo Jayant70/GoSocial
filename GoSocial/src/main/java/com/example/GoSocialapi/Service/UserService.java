@@ -34,8 +34,13 @@ public class UserService {
 		return userRepository.findAll();
 	}
 
+	
 	public User getUserData(String userName) {
 		return userRepository.findAllByuserName(userName);
+	}
+	
+	public User getUserDatabyEmailID(String emailID) {
+		return userRepository.findAllByemailID(emailID);
 	}
 
 }

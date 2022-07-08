@@ -40,6 +40,11 @@ public class PostService {
 		return result;
 	}
 	
+	public ArrayList<Post> retriveUserPostsFromDB(String userName){
+		ArrayList<Post> result=postRepo.findAllByuserName(userName);
+		return result;
+	}
+	
 	public ArrayList<Post> deletePostFromDB(UUID postID){
 		postRepo.deleteById(postID);
 		
