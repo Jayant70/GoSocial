@@ -23,12 +23,12 @@ public class UserController {
 	
 	@Autowired
 	UserService userService;
-	/*
+	
 	@GetMapping("/hello")
 	public String hello() {
 		return "Hello World!";
 	}
-	*/
+	
 	@PostMapping("/save")
 	public User saveUserMetaData(@RequestBody User user) {
 		return userService.submitMetaDataOfUser(user);
