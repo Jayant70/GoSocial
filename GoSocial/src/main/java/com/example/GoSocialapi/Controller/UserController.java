@@ -43,6 +43,7 @@ public class UserController {
 		if (status) {
 			return st;
 		}
+		userService.submitMetaDataOfUser(user);
 		return user.getUserName();
 	}
 	
@@ -58,6 +59,7 @@ public class UserController {
 				break;
 			}
 		}
+		
 		return status;
 		
 	}
