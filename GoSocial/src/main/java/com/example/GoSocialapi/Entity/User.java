@@ -11,9 +11,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
 	@Id
 	private String userID;
-	private String passwordEn;
 	private String emailID;
 	private String userName;
+	private String passwordEn;
+	
+	
 	//private String userImage;
 	//private boolean active;
 	//private Timestamp joiningDate;

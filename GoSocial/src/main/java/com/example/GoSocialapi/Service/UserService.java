@@ -4,10 +4,12 @@ package com.example.GoSocialapi.Service;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.GoSocialapi.Entity.Post;
 import com.example.GoSocialapi.Entity.User;
 import com.example.GoSocialapi.Repository.UserRepository;
 
@@ -37,5 +39,17 @@ public class UserService {
 	public User getUserData(String userID) {
 		return userRepository.findAllByuserID(userID);
 	}
+
+
+	public User getUserDatabyEmailID(String emailID) {
+		return userRepository.findAllByemailID(emailID);
+	}
+	/*
+	public ArrayList<User> deleteUserFromDB(String userID){
+		userRepository.deleteById(userID);
+		
+		return userRepository.findAll();
+	}
+	*/
 
 }

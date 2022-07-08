@@ -11,7 +11,7 @@ public class Post {
 	@Id
 	private UUID postID;
 	
-	private String userID;
+	//private String userID;
 	private String userName;
 	//private String imageURL;
 	
@@ -27,7 +27,7 @@ public class Post {
 	}
 
 
-	public Post(UUID postID, String userID, String userName, String description, int likes) {
+	public Post(UUID postID, String userName, String description, int likes) {
 		super();
 		this.postID = postID;
 		//this.userID = userID;
@@ -49,7 +49,7 @@ public class Post {
 		this.postID = postID;
 	}
 
-
+/*
 	public String getUserID() {
 		return userID;
 	}
@@ -58,7 +58,7 @@ public class Post {
 	public void setUserID(String userID) {
 		this.userID = userID;
 	}
-
+*/
 
 	public String getUserName() {
 		return userName;
