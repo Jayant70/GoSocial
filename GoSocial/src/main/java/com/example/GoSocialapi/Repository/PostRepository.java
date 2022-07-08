@@ -12,6 +12,7 @@ import com.example.GoSocialapi.Entity.Post;
 public interface PostRepository extends MongoRepository<Post, UUID>{
 	
 	ArrayList<Post> findAll();
+	ArrayList<Post> findAllByuserName(String userName);
 	Post save(Post post);
 	void deleteById(UUID postID);
 

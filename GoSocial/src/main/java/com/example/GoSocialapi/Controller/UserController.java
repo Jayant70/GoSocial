@@ -35,12 +35,14 @@ public class UserController {
 	}
 	
 	@PostMapping("/login")
-	public boolean loginCheck(@RequestBody User user) {
-		boolean status = false;
+	public String loginCheck(@RequestBody User user) {
+		//boolean status = false;
+		String status = "";
 		ArrayList<User> allUsers = userService.retrieveAllUserDetails();
 		for(User i : allUsers) {
 			if(i.getEmailID().equals(user.getEmailID()) && i.getPasswordEn().equals(user.getPasswordEn())) {
-				status = true;
+				//status = true;
+				status += i.getUserName();
 			}
 		}
 		return status;
@@ -54,8 +56,13 @@ public class UserController {
 	
 	@GetMapping("/getAllUsers/{userName}")
 	public User getUserDetail(@PathVariable("userName") String userName) {
+		
 		return userService.getUserData(userName);
 	}
 	
+	@GetMapping("/getAllUsers/email/{emailID}")
+	public User getUserDetailbyEmailID(@PathVariable("emailID") String emailID) {
+		return userService.getUserDatabyEmailID(emailID);
+	}
 
 }

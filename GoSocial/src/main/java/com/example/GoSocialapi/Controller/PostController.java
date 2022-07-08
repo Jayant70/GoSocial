@@ -43,6 +43,13 @@ public class PostController {
 		return result;
 	}
 	
+	@GetMapping("/getPost/{userName}")
+	public ArrayList<Post> retrieveAllPostByUser(@PathVariable("userName") String userName){
+		ArrayList<Post> result=postService.retriveUserPostsFromDB(userName);
+		return result;
+	}
+	
+	
 	@DeleteMapping("/delete/{postId}")
 	public ArrayList<Post> deleteParticularPost(@PathVariable("postId") UUID postID){
 		ArrayList<Post> result=postService.deletePostFromDB(postID);
