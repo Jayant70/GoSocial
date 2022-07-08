@@ -71,9 +71,9 @@ public class UserController {
 		return userService.retrieveAllUserDetails();
 	}
 	
-	@GetMapping("/getAllUsers/{userID}")
-	public User getUserDetail(@PathVariable("userID") String userID) {
-		return userService.getUserData(userID);
+	@GetMapping("/getAllUsers/{userName}")
+	public User getUserDetail(@PathVariable("userName") String userName) {
+		return userService.getUserData(userName);
 	}
 	
 	@GetMapping("/getAllUsers/email/{emailID}")
