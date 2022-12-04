@@ -1,0 +1,10 @@
+Hi,
+
+Here i am uploading the frontend src file of our group project which is made on React.
+The topic on which we made our project is a social media website "GoSocial", which connect all people around the 
+globe.This project is combinedly made by group which is "Group E".I Milan Goyal along with my colleague Ashish 
+Sagar worked on the fronend part of the project.
+
+Thanks
+Milan Goyal
+

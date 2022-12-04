@@ -1,0 +1,55 @@
+.greeting{
+    position: relative;
+    background-color: rgb(246, 187, 187);
+}
+.head-greeting{
+    position: relative;
+    margin-left: auto;
+}
+.all-home{
+    background-color: bisque;
+}
+.allUser{
+    background-color: rgb(239, 226, 156);
+}
+.addPost{
+    background-color: rgb(151, 244, 236);
+}
+.NewsFeed{
+    background-color: rgb(237, 100, 146);
+}
+.MyProfile{
+    background-color: rgb(239, 155, 114);
+}
+.SignOut{
+    background-color: rgb(111, 223, 101);
+}
+.post-box{
+    width: 500px;
+    height: 200px;
+    background-color: rgb(131, 182, 244);
+}
+.textarea {
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 1px 6px;
+  }
+  .textarea {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    resize: both;
+    min-height: 40px;
+    line-height: 20px;
+  }
+  .textarea[contenteditable]:empty::before {
+  content: "Placeholder still possible";
+  color: gray;
+}
+.autosize {
+    width: 450px;
+    height:300px
+
+  }
+  
